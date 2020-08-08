@@ -37,6 +37,16 @@ Sylajone: Arabic syntax Analyzer library
 - 
 
 </div>
+## Citation
+```bibtex
+@thesis{zerrouki2020adawat,
+author = {Taha Zerrouki},
+title = {Towards An Open Platform For Arabic Language Processing},
+type = {PhD thesis},
+institution = {Ecole Nationale Supérieure d'informatique, Alger, Algérie},
+date = {2020},
+}
+```
 ### install
 ```shell
 pip install sylajone
