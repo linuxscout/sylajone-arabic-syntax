@@ -1,0 +1,11 @@
+Metadata-Version: 0.1
+Name:maskouk-pysqlite
+Version: 0.1
+Summary:  Sylajone: Arabic syntax Analyzer library
+Home-page: http://github.com/linuxscout/asmai-arabic-semantic
+Author: Taha Zerrouki
+Author-email: taha.zerrouki@gmail.com
+License: GPL
+Description: Sylajone: Arabic syntax Analyzer library for Python
+Platform: Os-independent
+
