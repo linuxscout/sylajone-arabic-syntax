@@ -24,8 +24,10 @@ if sys.version_info[0] < 3:
     from CodernityDB.database import Database
     from CodernityDB.hash_index import HashIndex
 else:
-    from CodernityDB3.database import Database
-    from CodernityDB3.hash_index import HashIndex
+    #~ from CodernityDB3.database import Database
+    #~ from CodernityDB3.hash_index import HashIndex
+    from codernitydb3.database import Database
+    from codernitydb3.hash_index import HashIndex
 from hashlib import md5
 from pyarabic.arabrepr import arepr
 
