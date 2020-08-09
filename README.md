@@ -47,10 +47,7 @@ institution = {Ecole Nationale Supérieure d'informatique, Alger, Algérie},
 date = {2020},
 }
 ```
-### install
-```shell
-pip install sylajone
-```
+
 ### Usage
 
 #### import
