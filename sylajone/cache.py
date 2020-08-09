@@ -74,21 +74,25 @@ class cache :
             file_path = os.path.join(os.path.dirname(cache_path), '.thaalabCache')
         
         self.cache={};
-        self.db = Database(file_path)
-        if not self.db.exists():
-            self.db.create();
-            x_ind = WithAIndex(self.db.path, 'a')
-            self.db.add_index(x_ind)        
-        else:
-            self.db.open();
-
+        try:
+            self.db = Database(file_path)
+        
+            if not self.db.exists():
+                self.db.create();
+                x_ind = WithAIndex(self.db.path, 'a')
+                self.db.add_index(x_ind)        
+            else:
+                self.db.open();
+        except:
+            self.db = None
     def __del__(self):
         """
         Delete instance and clear cache
         
         """
         self.cache=None;
-        self.db.close();
+        if self.db:
+            self.db.close();
 
     def update(self):
         """update data base """
@@ -123,9 +127,11 @@ class cache :
             saved['doc']['d'] = data
             doc  = saved['doc']
             doc['update'] = True
-            self.db.update(doc)
+            if self.db :
+                self.db.update(doc)
         else:
-            self.db.insert(idata)
+            if self.db :            
+                self.db.insert(idata)
 
     
     def exists_cache_word(self, word):
@@ -183,8 +189,9 @@ class cache :
         """ display all contents of data base """
         #~ pass
         print("aranasyn.cache: dislay all records in Thaalib Database """)
-        for curr in self.db.all('a', with_doc=True):
-            print(curr['doc']['a'], arepr(curr['doc']['d']))
+        if self.db:
+            for curr in self.db.all('a', with_doc=True):
+                print(curr['doc']['a'], arepr(curr['doc']['d']))
         
 def mainly():
     mycache = cache()

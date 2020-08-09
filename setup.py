@@ -9,7 +9,7 @@ def readme():
     with open('README.rst', encoding="utf8") as f:
         return f.read()
 
-setup (name='sylajone', version='0.1',
+setup (name='sylajone', version='0.2',
       description="Sylajone: Arabic syntax Analyzer library",
       long_description = readme(),      
 
