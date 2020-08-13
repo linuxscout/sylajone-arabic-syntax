@@ -9,7 +9,7 @@ def readme():
     with open('README.rst', encoding="utf8") as f:
         return f.read()
 
-setup (name='sylajone', version='0.2',
+setup (name='sylajone', version='0.3',
       description="Sylajone: Arabic syntax Analyzer library",
       long_description = readme(),      
 
@@ -20,8 +20,7 @@ setup (name='sylajone', version='0.2',
       package_dir={'sylajone': 'sylajone'},
       packages=['sylajone'],
       install_requires=[ 'pyarabic>=0.6.2',
-			"CodernityDB>=0.5.0",
-			"codernitydb3>=0.6.0",
+			"pickledb>=0.9.0",
 			"libqutrub>=1.2.4.1",
 			"naftawayh>=0.4",
 			"qalsadi>=0.3.5",

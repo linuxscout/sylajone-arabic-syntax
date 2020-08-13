@@ -35,7 +35,8 @@ from pyarabic.arabrepr import arepr
 from . import syn_const  as sconst
 from . import synnode
 from . import stemmedsynword
-from . import cache
+#~ from . import cache
+from . import cache_pickledb as cache
 
 
 class SyntaxAnalyzer:
@@ -46,8 +47,8 @@ class SyntaxAnalyzer:
         self.wordtagger = wordtag.WordTagger()
         ## Cache for relations betwwen words
         # I will use it for traning for extracting relations between original words
-        self.syntax_train_enabled = False
-        #~ self.syntax_train_enabled = True
+        #~ self.syntax_train_enabled = False
+        self.syntax_train_enabled = True
         #file to use as cache in NoSQL format
         self.cache = cache.cache(cache_path)
         # structure will be:

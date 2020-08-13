@@ -1,7 +1,5 @@
-CodernityDB>=0.5.0
-CodernityDB3>=0.6.0
 libqutrub>=1.2.4.1
 naftawayh>=0.4
 pyarabic>=0.6.8
 qalsadi>=0.3.5
-
+pickledb>=0.9.0
