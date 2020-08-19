@@ -1101,7 +1101,7 @@ class SyntaxAnalyzer:
         flat_list = self.decode(stemmed_synwordlistlist)
         pprint.pprint(flat_list)
     
-    def analyze_text(self, text):
+    def analyze_text(self, text, synodes=False):
         """
         Text Analysis syntacticly
         @param text: input text
@@ -1110,7 +1110,10 @@ class SyntaxAnalyzer:
         analex  =  qalsadi.analex.Analex()
         result    =  analex.check_text(text)
         result, synodelist  =  self.analyze(result)
-        return result        
+        if synodes:
+            return result, synodelist
+        else:
+            return result        
 
 def mainly():
     """
